@@ -1,8 +1,16 @@
-$(document).ready(function() {Webcam.set('constraints',{
-    facingMode: "environment",
+$(document).ready(function() {
+    Webcam.set({
+    width: 320,
+    height: 240,
     image_format:"jpeg",
-    jpeg_quality:"90"
+    jpeg_quality:"90",
+    flip_horiz: true,
+    constraints: {
+        video: true,
+        facingMode: "environment"
+    }
 });
+Webcam.attach( '#my_camera' );
 
     $('#accesscamera').on('click', function() {
         Webcam.reset();
