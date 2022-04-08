@@ -19,7 +19,7 @@
             document.getElementById("redeem").disabled = false;
             var n=document.getElementById("inputAmount").value;
             var x=document.getElementById("pointeq");
-            x.value=(n*10000);
+            x.value=(n/100)+" rs";
             if(x.value> <?php echo $_SESSION['points']; ?>){
                 document.getElementById("redeem").disabled = true;
             }

@@ -64,7 +64,7 @@
                     <div class="row dash-row">
                         <div class="col-xl-4">
                             <div class="stats stats-primary">
-                                <h3 class="stats-title"> No of waste disposals today.</h3>
+                                <h3 class="stats-title"> Number of waste disposals today.</h3>
                                 <div class="stats-content">
                                     <div class="stats-icon">
                                         <i class="fas fa-user"></i>
