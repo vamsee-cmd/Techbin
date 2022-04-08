@@ -19,7 +19,7 @@
             document.getElementById("redeem").disabled = false;
             var n=document.getElementById("inputAmount").value;
             var x=document.getElementById("pointeq");
-            x.value=(n*10000);
+            x.value=(n/100)+" rs";
             if(x.value> <?php echo $_SESSION['points']; ?>){
                 document.getElementById("redeem").disabled = true;
             }
@@ -105,9 +105,9 @@
       <div class="modal-body">
       <form>
       <div class="form-group row justify-content-start d-inline-flex p-2">
-    <label for="amount" class="col-sm-2 col-form-label">Enter Amount</label>
+    <label for="amount" class="col-sm-2 col-form-label">Enter no of points to redeem.</label>
     <div class="col-sm-10">
-      <input type="text" onkeyup="calc()" class="form-control" id="inputAmount">
+      <input type="text" onkeyup="calc()" class="form-control" id="inputAmount" required>
     </div>
     
     <label for="equals to " class="col-sm-2 col-form-label">equals to</label>
@@ -118,28 +118,28 @@
       <div class="form-group row">
     <label for="Account number" class="col-sm-2 col-form-label">Account number</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword">
+      <input type="text" class="form-control" required id="inputPassword">
     </div>
   </div>
   <div class="form-group row">
     <label for="confirm account number" class="col-sm-2 col-form-label">confirm Acc number</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword">
+      <input type="text" class="form-control" required id="inputPassword">
     </div>
   </div>
   <div class="form-group row">
     <label for="IFSC code" class="col-sm-2 col-form-label">IFSC code</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword">
+      <input type="text" class="form-control" required id="inputPassword">
     </div>
   </div>
-</form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id="redeem" class="btn btn-success">Redeem</button>
+        <button type="submit" id="redeem" class="btn btn-success">Redeem</button>
       </div>
     </div>
+</form>
   </div>
 </div>
     <!--Modal-->
@@ -147,7 +147,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Capture Photo</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Capture Photo of trash dumped.</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

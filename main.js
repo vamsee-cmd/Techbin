@@ -1,7 +1,20 @@
 $(document).ready(function() {
+    if (screen.height <= screen.width) {
+        // Landscape
+                Webcam.set({
+			width: 320,
+			height: 240,
+		});
+               
+    } else {
+        // Portrait
+                Webcam.set({
+			width: 240,
+			height: 320,
+		}); 
+    }
+   Webcam.attach( '#my_camera' );
     Webcam.set({
-    width: 320,
-    height: 240,
     image_format:"jpeg",
     jpeg_quality:"90",
     flip_horiz: true,
@@ -87,6 +100,17 @@ Webcam.attach( '#my_camera' );
                         text: 'Something went wrong',
                         icon: 'error'
                     })
+                }
+            }
+        })
+        $.ajax({
+            url: 'updatePoints.php',
+            type: 'POST',
+            data: new FormData(this),
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                if(data == 'success') {
                 }
             }
         })
