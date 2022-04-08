@@ -1,25 +1,5 @@
-<<<<<<< HEAD
 $(document).ready(function() {Webcam.set('constraints',{
     facingMode: "environment",
-=======
-$(document).ready(function() {
-    if (screen.height <= screen.width) {
-        // Landscape
-                Webcam.set({
-			width: 320,
-			height: 240,
-		});
-               
-    } else {
-        // Portrait
-                Webcam.set({
-			width: 240,
-			height: 320,
-		}); 
-    }
-   Webcam.attach( '#my_camera' );
-    Webcam.set({
->>>>>>> parent of 1670c03 (Update main.js)
     image_format:"jpeg",
     jpeg_quality:"90"
 });
