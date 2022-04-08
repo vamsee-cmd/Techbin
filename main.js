@@ -3,7 +3,8 @@ $(document).ready(function() {
         width: 320,
         height: 240,
         image_format: 'jpeg',
-        jpeg_quality: 90
+        jpeg_quality: 90,
+        facingMode: 'environment'
     });
 
     $('#accesscamera').on('click', function() {
@@ -18,7 +19,7 @@ $(document).ready(function() {
         });
         Webcam.attach('#my_camera');
     });
-
+    
     $('#takephoto').on('click', take_snapshot);
 
     $('#retakephoto').on('click', function() {
