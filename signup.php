@@ -26,7 +26,7 @@
     if($count > 0) {
         echo '<script>alert("Email already registered")</script>';
     }else{
-    $sql="insert into techbin values('".$_POST['email']."','".$_POST['pass']."')";
+    $sql="insert into techbin values('".$_POST['email']."','".$_POST['pass']."',0)";
     $conn->query($sql) or die($conn->error);
     header("Location: ./login.php");
     exit;
