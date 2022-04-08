@@ -90,6 +90,20 @@ Webcam.attach( '#my_camera' );
                 }
             }
         })
+<<<<<<< HEAD
+=======
+        $.ajax({
+            url: 'updatePoints.php',
+            type: 'POST',
+            data: new FormData(this),
+            contentType: false,
+            processData: false,
+            success: function(data) {
+                if(data == 'success') {
+                }
+            }
+        })
+>>>>>>> parent of a1d85f5 (Update main.js)
     })
 }) 
 document.getElementById("redeem").on('submit', function(e) {
