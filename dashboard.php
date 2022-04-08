@@ -43,7 +43,7 @@
                         <i class="fas fa-info"></i> About </a>
                     <div class="dash-nav-dropdown-menu">
                         <a href="https://github.com/vamsee-cmd/techbin" target="_blank" class="dash-nav-dropdown-item">GitHub</a>
-                        <a href="http://linkedin.com" target="_blank" class="dash-nav-dropdown-item">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/vamshi-embadi/" target="_blank" class="dash-nav-dropdown-item">LinkedIn</a>
                     </div>
                 </div>
             </nav>
@@ -55,7 +55,7 @@
                     <i class="fas fa-bars"></i>
                 </a>
                 <div class="tools">
-                    <a href="https://github.com/HackerThemes/spur-template" target="_blank" class="tools-item">
+                    <a href="https://github.com/vamsee-cmd/Techbin" target="_blank" class="tools-item">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="#!" class="tools-item">
