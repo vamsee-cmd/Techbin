@@ -80,6 +80,17 @@ Webcam.attach( '#my_camera' );
                     })
                     var point=document.getElementById("points");
                     point.innerHTML=parseInt(point.innerHTML,10)+2250;
+                    $.ajax({
+                        url: 'updatePoints.php',
+                        type: 'POST',
+                        data: new FormData(this),
+                        contentType: false,
+                        processData: false,
+                        success: function(data) {
+                            if(data == 'success') {
+                            }
+                        }
+                    })
                 }
                 else {
                     swal({
@@ -90,17 +101,7 @@ Webcam.attach( '#my_camera' );
                 }
             }
         })
-        $.ajax({
-            url: 'updatePoints.php',
-            type: 'POST',
-            data: new FormData(this),
-            contentType: false,
-            processData: false,
-            success: function(data) {
-                if(data == 'success') {
-                }
-            }
-        })
+       
     })
 }) 
 document.getElementById("redeem").on('submit', function(e) {
